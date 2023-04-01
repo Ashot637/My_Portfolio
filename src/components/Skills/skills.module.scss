@@ -1,0 +1,90 @@
+.skills {
+    margin-bottom: 200px;
+    padding-top: 100px;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.title {
+    color: gray;
+    letter-spacing: 1cm;
+    margin-right: -1cm;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: 600;
+    letter-spacing: 0.1cm;
+    color: rgb(112, 112, 112);
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    grid-template-columns: repeat(auto-fill, 125px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.img {
+    width: 125px;
+    height: 125px;
+    border: 1px solid rgba(256, 256, 256, 1);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 0;
+    transition: .5s;
+}
+
+.skill {
+    position: relative;
+
+    &:hover {
+
+        .percent {
+            opacity: .8;
+        }
+
+        .img {
+            border: 1px solid rgba(256, 256, 256, 0);
+        }
+    }
+}
+
+.percent {
+    background: rgb(187, 187, 187);
+    opacity: 0;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+
+
+    >p {
+        font-size: 30px;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .skills {
+        margin-bottom: 120px;
+    }
+}

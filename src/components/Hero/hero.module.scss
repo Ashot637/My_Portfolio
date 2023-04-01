@@ -1,0 +1,200 @@
+.hero {
+    padding-top: 170px;
+    margin-bottom: 250px;
+}
+
+.inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.circle {
+    width: 500px;
+    height: 500px;
+    background: none;
+    border: 1px solid rgba(214, 214, 214, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    animation: anim .8s;
+    z-index: -1;
+    // animation: breathing 4s infinite;
+}
+
+.img {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin: 150px 0px 15px;
+}
+
+.title {
+    letter-spacing: 0.15cm;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-weight: 500;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.link {
+    transition: .3s;
+    border-radius: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+
+    &:nth-child(1) {
+        margin-right: -25px;
+    }
+}
+
+.link:hover {
+    color: #fdc345c9;
+    border: 1px solid #fdc345c9;
+
+}
+
+.buble {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: none;
+    top: 37%;
+    border: 1px solid rgba(214, 214, 214, 0.2);
+    border-radius: 50%;
+    z-index: -5;
+    animation: bulking 2s infinite linear;
+    transition-delay: 1s;
+}
+
+@keyframes bulking {
+
+    0% {
+        opacity: 1;
+        transform: scale(.4);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(.6);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(.8);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    40% {
+        opacity: .8;
+        transform: scale(1.2);
+    }
+
+    50% {
+        opacity: .6;
+        transform: scale(1.4);
+    }
+
+    60% {
+        opacity: .4;
+        transform: scale(1.6);
+    }
+
+    70% {
+        opacity: .2;
+        transform: scale(1.8);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes anim {
+    0% {
+        transform: scale(1.4);
+        opacity: .1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hero {
+        margin-bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    ul>li {
+        font-size: 13px;
+    }
+}
+
+
+
+// @keyframes breathing {
+//     0% {
+//         transform: scale(0.99);
+//         opacity: .8;
+//     }
+
+//     20% {
+//         opacity: .9;
+//     }
+
+//     35% {
+//         opacity: .6;
+//     }
+
+//     50% {
+//         transform: scale(1);
+//         opacity: .8;
+//     }
+
+//     65% {
+//         opacity: .6;
+//     }
+
+//     80% {
+//         opacity: .75;
+//     }
+
+//     100% {
+//         transform: scale(0.99);
+//         opacity: .9;
+//     }
+// }

@@ -1,0 +1,141 @@
+.projects {
+    padding-top: 100px;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    position: relative;
+}
+
+.title {
+    color: gray;
+    letter-spacing: 1cm;
+    margin-right: -1cm;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 200px;
+
+    &::-webkit-scrollbar {
+        height: 10px;
+        background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #fdc140;
+        border-radius: 10px;
+    }
+}
+
+.website {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    scroll-snap-align: center;
+    min-width: 100vw;
+    height: 500px;
+}
+
+.img {
+    width: 500px;
+    height: auto;
+}
+
+.desc {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.bg {
+    width: 100%;
+    height: 500px;
+    background: #F7AB0A;
+    position: absolute;
+    transform: skewY(-8deg);
+    top: 20%;
+    left: 0;
+    z-index: -5;
+    opacity: .2;
+}
+
+@media screen and (max-width: 1024px) {
+    .list {
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title {
+        letter-spacing: .5cm;
+        margin-right: -.5cm;
+    }
+
+    .inner {
+        gap: 100px;
+    }
+
+    .bg {
+        top: 20%;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    .bg {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .website {
+        height: 300px;
+    }
+
+    .bg {
+        height: 350px;
+    }
+
+    .inner {
+        gap: 65px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .img {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
